@@ -11,6 +11,7 @@ public class Tiger extends Piece {
     public Tiger(int side) {
         super(side, "tiger");
         rank = _rank;
+        index = 2*rank-1;
 
 
     }
