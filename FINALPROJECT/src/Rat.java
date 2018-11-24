@@ -1,4 +1,4 @@
-package model;
+
 /**
  * This class is a subclass of piece, corresponding to a rat
  * in the gameboard.
