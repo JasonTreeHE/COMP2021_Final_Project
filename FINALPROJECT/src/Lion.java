@@ -11,6 +11,7 @@ public class Lion extends Piece {
     public Lion(int side){
         super(side,"lion");
         rank = _rank;
+        index = 2*rank-1;
 
 
     }
