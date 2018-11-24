@@ -11,6 +11,7 @@ public class Cat extends Piece{
     public Cat( int side){
         super( side,"cat");
         rank = _rank;
+        index = 2*rank-1;
     }
 
     /**
