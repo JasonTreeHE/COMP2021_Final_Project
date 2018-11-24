@@ -1,3 +1,4 @@
+package model;
 /**
  * This class is a subclass of piece, corresponding to a rat
  * in the gameboard.
@@ -35,14 +36,10 @@ public class Rat extends Piece {
      */
     @Override
     public boolean ableToCapture(Piece other) {
-        if(this.isSameSide(other)) return false;
-        if(this.isInWater && other.isInWater) return true;
-        if(this.isInWater) return false;
-        if (other.getRank() == this.rank || other.isInTrap || other.getRank() == 8) {
-            return true;
-        } else {
-            return false;
-        }
+        boolean ability = false;
+        if (this.isSameSide(other)) ability = false;
+        else if (this.isInWater && other.isInWater) ability = true;
+        else ability = (other.getRank() == this.rank || other.isInTrap || other.getRank() == 8);
+        return ability;
     }
 }
-
