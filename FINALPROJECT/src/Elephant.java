@@ -12,6 +12,7 @@ public class Elephant extends Piece {
 
         super(side,"elephant");
         rank = _rank;
+        index = 2*rank-1;
 
     }
     /**
