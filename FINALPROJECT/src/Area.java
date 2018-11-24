@@ -1,31 +1,22 @@
+/**
+ * this enum class list four basic properties for a  cell
+ */
 public enum Area {
-
-
-    /**
-     * type is the value of four types:normal, river,trap,den.
-     */
     /**
      * literal meaning.
      */
-    NORMAL
-    ,
+    NORMAL,
     /**
      * the property of the unit is river.
      */
-    RIVER
-    ,
+    RIVER,
     /**
      * the property is trap.
      */
-    TRAP
-    ,
-
-
-
-    /**
+    TRAP,
+       /**
      * type is the value of four types:normal, river,trap,den.
      */
-    DEN
-
+    DEN;
 
 }
