@@ -11,6 +11,7 @@ public class Leopard extends Piece {
     public Leopard( int side){
         super( side,"leopard");
         rank = _rank;
+        index = 2*rank-1;
 
 
     }
