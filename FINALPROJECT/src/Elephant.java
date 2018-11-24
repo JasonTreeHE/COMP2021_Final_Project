@@ -21,8 +21,6 @@ public class Elephant extends Piece {
     public static int getrank(){
         return _rank;
     }
-
-
     /**
      * overrides the method of piece because elephant cannot eat rat
      * @param other another piece
@@ -38,4 +36,3 @@ public class Elephant extends Piece {
 
     }
 }
-
