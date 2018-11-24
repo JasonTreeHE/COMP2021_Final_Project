@@ -1,12 +1,25 @@
+
+/**
+ * This class is used to initialize the whole game board in terms of data.
+ */
 public class Board {
     private static final int WIDTH = 7;
     private static final int LENGTH = 9;
+    /**
+     * This is the gameboard of our game,
+     * containg 7*9 cells.
+     * @see dataCell
+     */
     public dataCell[][] board;
 
+    /**
+     * Constructor1: this is the constructor for initializing from scratch
+     */
     public Board() {
         for (int i = 0; i < WIDTH; i++) {
             for (int k = 0; k < LENGTH; k++) {
-                if ((i == 2 && k == 0) || (i == 2 && k == 8) || (i == 3 && k == 1) || (i == 3 && k == 7) || (i == 4 && k == 0) || (i == 4 && k == 8))
+                if ((i == 2 && k == 0) || (i == 2 && k == 8) || (i == 3 && k == 1) || (i == 3 && k == 7) || (i == 4 && k == 0)
+                        || (i == 4 && k == 8))
                     board[i][k] = new dataCell(i, k, null, Area.TRAP);
                 else if ((i == 3 && (k == 0 || k == 8))) board[i][k] = new dataCell(i, k, null, Area.DEN);
                 else if ((i >= 2 && i <= 3 && k >= 3 && k <= 5) || (i >= 4 && i <= 5 && k >= 3 && k <= 5))
@@ -33,12 +46,19 @@ public class Board {
 
     }
 
+    /**
+     * Constructor2, which is used to initialize a gameboard stored before. The data is stored in a 2D array.
+     * @param save a 2D array used to represent the data stored.
+     * @see #
+     */
     public Board(int save[][]) {
         for (int i = 0; i < WIDTH; i++) {
             for (int k = 0; k < LENGTH; k++) {
+                //side and rank uniquely defined an animal
                 int side = save[i][k] % 2 == 0 ? 0 : 1;
                 int rank = (save[i][k] - side) / 2;
-                if ((i == 2 && k == 0) || (i == 2 && k == 8) || (i == 3 && k == 1) || (i == 3 && k == 7) || (i == 4 && k == 0) || (i == 4 && k == 8)) {
+                if ((i == 2 && k == 0) || (i == 2 && k == 8) || (i == 3 && k == 1) || (i == 3 && k == 7) || (i == 4 && k == 0) ||
+                        (i == 4 && k == 8)) {
                     switch (rank) {
                         case 0:
                             board[i][k] = new dataCell(i, k, null, Area.TRAP);
