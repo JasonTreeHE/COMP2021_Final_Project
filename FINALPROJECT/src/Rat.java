@@ -13,6 +13,7 @@ public class Rat extends Piece {
     public Rat(int side) {
         super(side, "rat");
         rank = _rank;
+        index = 2*rank-1;
     }
     /**
      * @return static rank value of a specific piece
