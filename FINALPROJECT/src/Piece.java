@@ -9,6 +9,11 @@ public class Piece {
      */
     protected int rank;
     /**
+     * every animal(from both sides) are assigned to a unique
+     * index
+     */
+    protected int index ;
+    /**
      * side refers to the user an animal belongs to
      * 0 for one user, 1 for another user
      */
@@ -20,7 +25,7 @@ public class Piece {
     /**
      * true for in water, false for not in water(by defalut)
      */
-    public boolean isInWater = false;
+    protected boolean isInWater = false;
     /**
      * a piece know itself whether itself is in a trap.
      * True for in trap,vice versa.
@@ -38,6 +43,11 @@ public class Piece {
         this.name = name;
     }
 
+    /**
+     * gets the index of that piece
+     * @return the index
+     */
+    public int getIndex(){return index;}
     /**
      * gets which user the piece belongs to
      *
@@ -86,3 +96,11 @@ public class Piece {
 
     }
 }
+
+
+
+
+
+
+
+
